@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="409.0" prefWidth="821.0" styleClass="anchorPane" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="taskmanager.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutX="-4.0" layoutY="56.0" prefHeight="353.0" prefWidth="821.0" styleClass="scrollPane" stylesheets="@Style.css">
+         <children>
+            <ScrollPane layoutX="238.0" prefHeight="353.0" prefWidth="583.0" styleClass="scrollPane" stylesheets="@Style.css">
+               <content>
+                  <TableView fx:id="table" prefHeight="350.0" prefWidth="580.0">
+                    <columns>
+                      <TableColumn fx:id="TaskName" prefWidth="151.0" />
+                      <TableColumn fx:id="Description" minWidth="0.0" prefWidth="136.0" />
+                        <TableColumn fx:id="DueDate" prefWidth="147.0" />
+                        <TableColumn fx:id="Status" prefWidth="145.0" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Pane layoutX="38.0" prefHeight="353.0" prefWidth="200.0" styleClass="pane">
+               <children>
+                  <Button fx:id="AddButton" layoutX="135.0" layoutY="272.0" mnemonicParsing="false" onAction="#AddNew" prefHeight="29.0" prefWidth="30.0" stylesheets="@Style.css" text="+" textFill="WHITE">
+                     <font>
+                        <Font name="Tahoma Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="TaskNameField" layoutX="35.0" layoutY="95.0" prefHeight="29.0" prefWidth="130.0" promptText="Task Name" styleClass="jfx-text-field" stylesheets="@Style.css" />
+                  <DatePicker fx:id="DueDatePicker" layoutX="35.0" layoutY="147.0" prefHeight="29.0" prefWidth="130.0" promptText="Due Date" styleClass="font" stylesheets="@Style.css" />
+                  <TextArea fx:id="DescriptionField" layoutX="35.0" layoutY="198.0" prefHeight="65.0" prefWidth="130.0" promptText="   Description" styleClass="text-area" stylesheets="@Style.css" />
+                  <ImageView fitHeight="49.0" fitWidth="65.0" layoutX="76.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@to-do-list.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
